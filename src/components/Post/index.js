@@ -8,11 +8,32 @@ import Avatar from "../Avatar";
 
 function Post({ text }) {
   return (
-    <div style={{ display: "flex" }}>
-      <div>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          alignItems: "flex-start",
+          justifyContent: "center",
+          flexDirection: "row",
+          width: "80px",
+          height: "80px",
+          float: "left",
+          margin: "auto",
+        }}
+      >
         <Avatar />
       </div>
-      <div style={{ float: "left" }}>
+      <div
+        style={{
+          float: "left",
+          lineHeight: "50px",
+        }}
+      >
         <p>{text}</p>
       </div>
     </div>

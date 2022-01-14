@@ -12,22 +12,33 @@ function Avatar() {
     fetchData();
   }, []);
   return (
-    <>
+    <div>
       <div
         style={{
           display: "flex",
-          width: "80px",
-          height: "80px",
+          width: "50px",
+          height: "50px",
           float: "left",
           margin: "auto",
+          padding: 0,
+          backgroundColor: "white",
+          borderRadius: "50%",
+          borderColor: "black",
+          borderStyle: "solid",
         }}
       >
         <img src={avatar.sprites.front_default} alt="Jigglypuff pokemon" />
       </div>
-      <div style={{ float: "left" }}>
-        <h3>{avatar.name}</h3>
-      </div>
-    </>
+      {/* <div
+        style={{float: "left",}}
+      >
+        <h4
+          style={{margin: "0",}}
+        >
+          {avatar.name}
+        </h4>
+      </div> */}
+    </div>
   );
 }
 
