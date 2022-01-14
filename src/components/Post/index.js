@@ -11,6 +11,44 @@ function Post({ image, author, text }) {
       <h2>{author}</h2>
       <p>{text}</p>
     </article>
+
+// Use p tag for text.
+// Import Avatar component to display the avatar picture alongside the text.
+
+import Avatar from "../Avatar";
+
+function Post({ text }) {
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          alignItems: "flex-start",
+          justifyContent: "center",
+          flexDirection: "row",
+          width: "80px",
+          height: "80px",
+          float: "left",
+          margin: "auto",
+        }}
+      >
+        <Avatar />
+      </div>
+      <div
+        style={{
+          float: "left",
+          lineHeight: "50px",
+        }}
+      >
+        <p>{text}</p>
+      </div>
+    </div>
+
   );
 }
 
