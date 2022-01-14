@@ -5,20 +5,15 @@ import "./App.css";
 import samplePosts from "../../libs/data";
 
 import { LandingPage } from "../LandingPage";
-import Post from "../Post";
+import PostDisplay from "../PostDisplay";
 
 function App() {
   const [posts, setPosts] = useState(samplePosts);
   return (
     <div className="App-header">
-      <header className="App-header">
-        {posts.map(function (item) {
-          return <Post key={item.text} text={item.text} />;
-        })}
-      </header>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/posts" element={<Post />} />
+        <Route path="/posts" element={<PostDisplay posts={posts} />} />
       </Routes>
     </div>
   );
