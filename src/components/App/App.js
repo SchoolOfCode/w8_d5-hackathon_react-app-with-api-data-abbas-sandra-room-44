@@ -1,13 +1,22 @@
+import React, { useState, useEffect, useReducer } from "react";
+import { v4 } from "uuid";
+
+import CommentBox from "../CommentBox";
+
 import "./App.css";
 import Post from "../Post";
 import samplePosts from "../../libs/data";
-import { useState } from "react";
 
 import {LandingPage} from "./../LandingPage/index.js"
+
 
 function App() {
   const [posts, setPosts] = useState(samplePosts);
   return (
+
+    <div className="App-header">
+      <CommentBox />
+
     <div className="App">
 
       <LandingPage/>
@@ -17,6 +26,7 @@ function App() {
           return <Post key={item.text} text={item.text} />;
         })}
       </header>
+
 
     </div>
   );
