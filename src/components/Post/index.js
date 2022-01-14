@@ -5,6 +5,7 @@
 // Import Avatar component to display the avatar picture alongside the text.
 
 import Avatar from "../Avatar";
+import CommentBox from "../CommentBox";
 
 function Post({ text }) {
   return (
@@ -36,6 +37,7 @@ function Post({ text }) {
       >
         <p>{text}</p>
       </div>
+      <CommentBox />
     </div>
   );
 }
